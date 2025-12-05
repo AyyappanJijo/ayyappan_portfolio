@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayyappan • Anime Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="anime-loader"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Neon Cyberpunk Background -->
+  <div class="neon-bg"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h1 class="logo">Ayyappan</h1>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2 class="typewriter">Hi, I'm Ayyappan 👋</h2>
+      <p>Software Engineer • Data Analyst • Tech Explorer</p>
+    </div>
+
+    <!-- Anime Character Illustration With Shine Effect -->
+    <div class="anime-illustration">
+      <img src="Photo/Anime_Ayyappan.pic.png" alt="Anime Character" class="anime-img" />
+      <div class="shine"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section fade-in">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      <div class="about-text">
+<h2>About Me</h2>
+<p>I’m Ayyappan, a passionate engineer who loves turning ideas into real solutions.</p>
+<p>I work on backend development and data analytics with precision and clarity.</p>
+<p>Clean code, practical logic, and problem‑solving are core to my identity.</p>
+<p>I enjoy creating dashboards, systems, and tools that make work easier.</p>
+<p>Every day, I strive to grow into a stronger and more impactful engineer.</p>
+</div>
+    </p>
+  </section>
+
+  <!-- Skills Section (Glassmorphism Cards) -->
+  <section id="skills" class="section fade-in">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="glass-card">Java & Spring Boot</div>
+      <div class="glass-card">Python</div>
+      <div class="glass-card">SQL</div>
+      <div class="glass-card">Power BI</div>
+      <div class="glass-card">HTML & CSS</div>
+      <div class="glass-card">AI Basics</div>
+      <div class="glass-card">Cloud</div>
+      <div class="glass-card">Excel</div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section fade-in">
+    <h2 class="section-title">Experience</h2>
+    <div class="glass-card">Infosys – System Engineer</div>
+    <div class="glass-card">Cyfotok – Data Analyst Intern</div>
+    <div class="glass-card">NextGen – Data Intern</div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section fade-in">
+    <h2 class="section-title">Projects</h2>
+    <div class="skills-grid">
+      <div class="glass-card">GPS-Based Attendance System</div>
+      <div class="glass-card">IoT Accident Detection System</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-in">
+    <h2 class="section-title">Contact</h2>
+    <p>📞 9994311975</p>
+    <p>📧 ayyappanjijo2002@gmail.com</p>
+    <p>LinkedIn: Ayyappan V</p>
+  </section>
+
+  <footer class="footer">© 2025 Ayyappan • All Rights Reserved</footer>
+
+  <script>
+    // Loader
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.opacity = "0";
+      setTimeout(() => document.getElementById("loader").style.display = "none", 600);
+    });
+
+    // Scroll Reveal
+    const sections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
